@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include<stdlib.h>
 #define MAX 40
-typedef struct node{
+typedef struct Node{
     int data;
-    node* prev;
-    node* next;
-}node;
-node*list;
+    Node* prev;
+    Node* next;
+}Node;
+Node*list;
 
