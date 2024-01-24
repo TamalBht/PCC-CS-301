@@ -26,6 +26,7 @@ void merge(int arr[],int low,int mid,int high){
     }
 
 }
+
 void mergeSort(int high,int low,int arr[]){
     //if this condition is not given the it will be an infinite recursive loop
     if(low<high){
