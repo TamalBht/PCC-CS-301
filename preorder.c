@@ -16,7 +16,7 @@ void preorder(Node* root){
     if(root==NULL){
         return;
     }
-    print("%d",root->data);
+    printf("%d",root->data);
     preorder(root->left);
     preorder(root->right);
 }
