@@ -29,6 +29,12 @@ void inorder(Node* root){
 
     inorder(root->right);
 }
+void postorder(Node* root){
+    if(root==NULL) return;
+    postorder(root->left);
+    postorder(root->right);
+    printf("%d->",root->data);
+}
 int main(){
     Node* root=createNode(1);
     root->left = createNode(2);
@@ -39,6 +45,7 @@ int main(){
     preorder(root);
     printf("\n Inorder traversal: ");
     inorder(root);
-
+    printf("\n Postorder traversal: ");
+    postorder(root);
     return 0;
 }
