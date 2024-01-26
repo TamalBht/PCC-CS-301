@@ -16,9 +16,18 @@ void preorder(Node* root){
     if(root==NULL){
         return;
     }
-    printf("%d",root->data);
+    printf("%d->",root->data);
     preorder(root->left);
     preorder(root->right);
+}
+void inorder(Node* root){
+    if(root==NULL){
+        return;
+    }
+    inorder(root->left);
+    printf("%d->",root->data);
+
+    inorder(root->right);
 }
 int main(){
     Node* root=createNode(1);
@@ -28,5 +37,8 @@ int main(){
     root->left->right = createNode(5);
     printf("Preorder Traversal: ");
     preorder(root);
+    printf("\n Inorder traversal: ");
+    inorder(root);
+
     return 0;
 }

@@ -12,11 +12,3 @@ Node* createNode(int inp){
     newNode->right = NULL;
     return newNode;
 }
-void preorder(Node* root){
-    if(root==NULL){
-        return;
-    }
-    printf("%d",root->data);
-    preorder(root->left);
-    preorder(root->right);
-}
