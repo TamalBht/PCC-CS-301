@@ -13,3 +13,4 @@ Node* createNode(int inp){
     newNode->left=newNode->right=NULL;
     return newNode;
 }
+
