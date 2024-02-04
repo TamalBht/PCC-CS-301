@@ -3,8 +3,8 @@
 #define MAX 100
 typedef struct Node{
     int data;
-    Node* left;
-    Node* right;
+    struct Node* left;
+    struct Node* right;
 }Node;
 Node* createNode(int inp){
     Node* newNode=(Node*)malloc(sizeof(Node));
