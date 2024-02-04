@@ -21,4 +21,8 @@ void enq(Node**queue ,Node* node,int* rear){
     queue[*rear]=node;
     (*rear)++;//so it is incremented so that a new item could be inserted
 }
+Node* deq(Node**queue,int* front){
+    (*front)++;
+    return queue[*front-1];
+}
 
