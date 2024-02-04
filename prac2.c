@@ -25,4 +25,15 @@ Node* deq(Node**queue,int* front){
     (*front)++;
     return queue[*front-1];
 }
-
+void printLevelOrder(Node* root){
+    int front,rear;
+    Node** queue =createQueue(&front,&rear);
+    Node* tempNode=root;//this is taken for reference
+    while(tempNode){
+        printf("%d",tempNode->data);
+        //if left and right exists
+        if(tempNode->left) enq(queue,tempNode->left,&rear);
+        if(tempNode->right)enq(queue,tempNode->right,&rear);
+        
+    }
+}
