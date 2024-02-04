@@ -34,6 +34,17 @@ void printLevelOrder(Node* root){
         //if left and right exists
         if(tempNode->left) enq(queue,tempNode->left,&rear);
         if(tempNode->right)enq(queue,tempNode->right,&rear);
-        
+        //updating the temp node
+        tempNode=deq(queue,&front);
+        printf("\n");
     }
+}
+int main(){
+    Node* root= createNode(1);
+    root->left=createNode(2);
+    root->right=createNode(3);
+    root->left->right=createNode(5);
+    root->left->left=createNode(4);
+    printLevelOrder(root);
+    return 0;
 }
