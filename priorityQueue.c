@@ -68,6 +68,7 @@ int main(){
     Queue q;
     initial(&q);
     int ch;
+    Element dequed;
     while(1){
         printf("Press 1 to enq\nPress 2 to deq\nPress3 to display\n 4 to exit");
         scanf("%d",&ch);
@@ -76,7 +77,7 @@ int main(){
                 enqueue(&q);
                 break;
             case(2):
-                dequeue(&q);
+                dequed=dequeue(&q);
                 break;
             case(3):
                 display(&q);
